@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Livraria Da Leh</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            📚 <span>Livraria</span> Da Leh
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#livros">Livros</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+
+        <button id="temaBtn" class="tema-btn">
+            🌙
+        </button>
+
+    </header>
+
+
+    <!-- ================= INÍCIO ================= -->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-text">
+
+            <p class="destaque">
+                ✨ Bem-vinda à Livraria Da Leh
+            </p>
+
+            <h1>
+                Um livro pode abrir
+                <span>um novo mundo.</span>
+            </h1>
+
+            <p>
+                Descubra romances, aventuras, fantasias, mistérios
+                e histórias que podem conquistar seu coração.
+            </p>
+
+            <a href="#livros" class="botao">
+                Explorar livros
+            </a>
+
+        </div>
+
+
+        <!-- LIVRO ANIMADO -->
+
+        <div class="livro-animado">
+
+            <div class="livro">
+
+                <div class="pagina pagina-esquerda">
+                    <span>📖</span>
+                </div>
+
+                <div class="pagina pagina-direita">
+                    <span>✨</span>
+                </div>
+
+                <div class="meio"></div>
+
+            </div>
+
+            <div class="brilho brilho1"></div>
+            <div class="brilho brilho2"></div>
+            <div class="brilho brilho3"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LIVROS ================= -->
+
+    <main id="livros">
+
+        <h2>📚 Minha estante</h2>
+
+        <p class="subtitulo">
+            Encontre sua próxima leitura favorita.
+        </p>
+
+
+        <!-- PESQUISA E FILTRO -->
+
+        <div class="controles">
+
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="🔎 Pesquisar livro ou autor..."
+            >
+
+            <select id="categoria">
+
+                <option value="todos">
+                    Todas as categorias
+                </option>
+
+                <option value="romance">
+                    Romance
+                </option>
+
+                <option value="fantasia">
+                    Fantasia
+                </option>
+
+                <option value="aventura">
+                    Aventura
+                </option>
+
+                <option value="misterio">
+                    Mistério
+                </option>
+
+                <option value="ficcao">
+                    Ficção
+                </option>
+
+                <option value="religiao">
+                    Religioso
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- LIVROS -->
+
+        <div
+            class="livros-container"
+            id="listaLivros"
+        >
+
+            <!-- 1 -->
+
+            <article
+                class="livro-card"
+                data-categoria="romance"
+                data-titulo="Amor em Roma"
+                data-autor="Sarah Adams"
+            >
+
+                <div class="capa">
+                    <img
+                        class="capa-img"
+                        data-busca="Amor em Roma Sarah Adams"
+                        alt="Capa de Amor em Roma"
+                    >
+
+                    <div class="capa-fallback">
+                        💜
+                    </div>
+                </div>
+
+                <span class="categoria-tag">
+                    Romance
+                </span>
+
+                <h3>Amor em Roma</h3>
+
+                <p class="autor">
+                    Sarah Adams
+                </p>
+
+                <button
+                    class="detalhes"
+                    data-titulo="Amor em Roma"
+                    data-autor="Sarah Adams"
+                    data-categoria="Romance"
+                    data-resumo="Amelia Rose, conhecida artisticamente como Rae Rose, é uma estrela da música que está cansada da exposição e da vida cercada por expectativas. Inspirada por um clássico de Audrey Hepburn, ela decide fugir para uma pequena cidade chamada Roma, no estado americano do Kentucky. Quando seu carro quebra, ela acaba conhecendo Noah Walker, um homem reservado que administra a loja de tortas que herdou da avó. O encontro entre os dois começa de maneira pouco amigável, mas a convivência faz Amelia conhecer uma vida muito diferente daquela que levava como celebridade. Entre moradores curiosos, uma cidade pequena e sentimentos inesperados, ela começa a perceber que talvez não precise viver para sempre de acordo com a imagem que os outros criaram para ela."
+                >
+                    Ver resumo
+                </button>
+
+                <button class="favorito">
+                    ♡
+                </button>
+
+            </article>
+
+
+            <!-- 2 -->
+
+            <article
+                class="livro-card"
+                data-categoria="romance"
+                data-titulo="A Hipótese do Amor"
+                data-autor="Ali Hazelwood"
+            >
+
+                <div class="capa">
+
+                    <img
+                        class="capa-img"
+                        data-busca="A Hipótese do Amor Ali Hazelwood"
+                        alt="Capa de A Hipótese do Amor"
+                    >
+
+                    <div class="capa-fallback">
+                        🧪
+                    </div>
+
+                </div>
+
+                <span class="categoria-tag">
+                    Romance
+                </span>
+
+                <h3>A Hipótese do Amor</h3>
+
+                <p class="autor">
+                    Ali Hazelwood
+                </p>
+
+                <button
+                    class="detalhes"
+                    data-titulo="A Hipótese do Amor"
+                    data-autor="Ali Hazelwood"
+                    data-categoria="Romance"
+                    data-resumo="Olive Smith é uma estudante de doutorado em Biologia que confia muito mais na ciência do que em sentimentos românticos. Para ajudar sua melhor amiga, Olive acaba entrando em um relacionamento de mentira com Adam Carlsen, um professor conhecido por seu jeito sério e intimidador. O que começa como uma situação planejada para convencer outras pessoas aos poucos se transforma em algo muito mais complicado. Enquanto Olive tenta entender o que está acontecendo entre os dois, ela precisa lidar com a vida acadêmica, pesquisas, inseguranças e com a diferença entre aquilo que pode ser explicado racionalmente e aquilo que simplesmente acontece."
+                >
+                    Ver resumo
+                </button>
+
+                <button class="favorito">
+                    ♡
+                </button>
+
+            </article>
+
+
+            <!-- 3 -->
+
+            <article
+                class="livro-card"
+                data-categoria="romance"
+                data-titulo="Bridgerton - O Duque e Eu"
+                data-autor="Julia Quinn"
+            >
+
+                <div class="capa">
+
+                    <img
+                        class="capa-img"
+                        data-busca="Bridgerton O Duque e Eu Julia Quinn"
+                        alt="Capa de Bridgerton"
+                    >
+
+                    <div class="capa-fallback">
+                        👑
+                    </div>
+
+                </div>
+
+                <span class="categoria-tag">
+                    Romance
+                </span>
+
+                <h3>Bridgerton</h3>
+
+                <p class="autor">
+                    Julia Quinn
+                </p>
+
+                <button
+                    class="detalhes"
+                    data-titulo="Bridgerton — O Duque e Eu"
+                    data-autor="Julia Quinn"
+                    data-categoria="Romance histórico"
+                    data-resumo="A história acompanha Daphne Bridgerton, uma jovem integrante de uma família bastante conhecida pela sociedade londrina. Durante a temporada de eventos e bailes, Daphne precisa lidar com as expectativas relacionadas ao casamento. Simon Basset, o duque de Hastings, não pretende se casar e deseja evitar a pressão da sociedade. Os dois acabam criando um acordo que faz parecer que existe interesse entre eles, mas a convivência transforma a situação. O livro combina romance, conflitos familiares, costumes da sociedade e os relacionamentos entre os membros da família Bridgerton."
+                >
+                    Ver resumo
+                </button>
+
+                <button class="favorito">
+                    ♡
+                </button>
+
+            </article>
+
+
+            <!-- 4 -->
+
+            <article
+                class="livro-card"
+                data-categoria="fantasia"
+                data-titulo="Harry Potter"
+                data-autor="J. K. Rowling"
+            >
+
+                <div class="capa">
+
+                    <img
+                        class="capa-img"
+                        data-busca="Harry Potter Pedra Filosofal J K Rowling"
+                        alt="Capa de Harry Potter"
+                    >
+
+                    <div class="capa-fallback">
+                        ⚡
+                    </div>
+
+                </div>
+
+                <span class="categoria-tag">
+                    Fantasia
+                </span>
+
+                <h3>Harry Potter</h3>
+
+                <p class="autor">
+                    J. K. Rowling
+                </p>
+
+                <button
+                    class="detalhes"
+                    data-titulo="Harry Potter e a Pedra Filosofal"
+                    data-autor="J. K. Rowling"
+                    data-categoria="Fantasia"
+                    data-resumo="Harry Potter é um garoto que cresceu sem conhecer a verdadeira história de sua família. Ao completar onze anos, descobre que é um bruxo e recebe uma vaga em Hogwarts, uma escola de magia e bruxaria. Lá, Harry faz amizade com Hermione Granger e Ron Weasley e começa a conhecer o mundo mágico. Enquanto aprende feitiços, participa das aulas e descobre os segredos de Hogwarts, ele também percebe que seu passado está ligado a um dos bruxos mais perigosos daquele universo. A história apresenta amizade, coragem, descobertas e o início da jornada de Harry no mundo da magia."
+                >
+                    Ver resumo
+                </button>
+
+                <button class="favorito">
+                    ♡
+                </button>
+
+            </article>
+
+
+            <!-- 5 -->
+
+            <article
+                class="livro-card"
+                data-categoria="aventura"
+                data-titulo="Percy Jackson"
+                data-autor="Rick Riordan"
+            >
+
+                <div class="capa">
+
+                    <img
+                        class="capa-img"
+                        data-busca="Percy Jackson O Ladrão de Raios Rick Riordan"
+                        alt="Capa de Percy Jackson"
+                    >
+
+                    <div class="capa-fallback">
+                        ⚡
+                    </div>
+
+                </div>
+
+                <span class="categoria-tag">
+                    Aventura
+                </span>
+
+                <h3>Percy Jackson</h3>
+
+                <p class="autor">
+                    Rick Riordan
+                </p>
+
+                <button
+                    class="detalhes"
+                    data-titulo="Percy Jackson e o Ladrão de Raios"
+                    data-autor="Rick Riordan"
+                    data-categoria="Aventura / Fantasia"
+                    data-resumo="Percy Jackson é um garoto que sempre teve a sensação de não se encaixar no mundo comum. Aos poucos, ele descobre que os deuses da mitologia grega continuam existindo e que ele próprio faz parte desse universo. Ao descobrir sua origem, Percy vai para um acampamento destinado a jovens semideuses. Quando um importante artefato do Olimpo desaparece, ele acaba envolvido em uma missão para descobrir quem está por trás do desaparecimento e evitar um conflito entre os deuses. A história mistura mitologia grega, amizade, humor e aventura em um cenário moderno."
+                >
+                    Ver resumo
+                </button>
+
+                <button class="favorito">
+                    ♡
+                </button>
+
+            </article>
+
+
+            <!-- 6 -->
+
+            <article
+                class="livro-card"
+                data-categoria="misterio"
+                data-titulo="Os Naturais"
+                data-autor="Jennifer Lynn Barnes"
+            >
+
+                <div class="capa">
+
+                    <img
+                        class="capa-img"
+                        data-busca="Os Naturais Jennifer Lynn Barnes"
+                        alt="Capa de Os Naturais"
+                    >
+
+                    <div class="capa-fallback">
+                        🔎
+                    </div>
+
+                </div>
+
+                <span class="categoria-tag">
+                    Mistério
+                </span>
+
+                <h3>Os Naturais</h3>
+
+                <p class="autor">
+                    Jennifer Lynn Barnes
+                </p>
+
+                <button
+                    class="detalhes"
+                    data-titulo="Os Naturais — Academia dos Casos Arquivados"
+                    data-autor="Jennifer Lynn Barnes"
+                    data-categoria="Mistério / Thriller"
+                    data-resumo="Cassie Hobbes possui uma habilidade incomum para perceber padrões e compreender o comportamento das pessoas. Essa capacidade chama a atenção de um programa secreto ligado ao FBI, que reúne jovens com talentos extraordinários para ajudar a solucionar casos antigos. Cassie passa a conviver com outros jovens igualmente habilidosos, cada um especializado em uma área diferente. Enquanto o grupo tenta solucionar casos não resolvidos, novos acontecimentos fazem com que eles percebam que os mistérios podem estar mais próximos deles do que imaginavam. A série combina investigação, enigmas, relações entre os personagens e muitas reviravoltas."
+                >
+                    Ver resumo
+                </button>
+
+                <button class="favorito">
+                    ♡
+                </button>
+
+            </article>
+
+
+            <!-- 7 -->
+
+            <article
+                class="livro-card"
+                data-categoria="misterio"
+                data-titulo="Jogos de Herança"
+                data-autor="Jennifer Lynn Barnes"
+            >
+
+                <div class="capa">
+
+                    <img
+                        class="capa-img"
+                        data-busca="Jogos de Herança Jennifer Lynn Barnes"
+                        alt="Capa de Jogos de Herança"
+                    >
+
+                    <div class="capa-fallback">
+                        🗝️
+                    </div>
+
+                </div>
+
+                <span class="categoria-tag">
+                    Mistério
+                </span>
+
+                <h3>Jogos de Herança</h3>
+
+                <p class="autor">
+                    Jennifer Lynn Barnes
+                </p>
+
+                <button
+                    class="detalhes"
+                    data-titulo="Jogos de Herança"
+                    data-autor="Jennifer Lynn Barnes"
+                    data-categoria="Mistério"
+                    data-resumo="A vida de Avery Grambs muda completamente quando o bilionário Tobias Hawthorne morre e deixa praticamente toda a sua fortuna para ela. O detalhe é que Avery nunca conheceu o homem e não entende por que foi escolhida. Para receber a herança, ela precisa morar na enorme Casa Hawthorne junto com a família que esperava ficar com o dinheiro. Os quatro netos de Tobias são inteligentes, desconfiados e estão determinados a descobrir o motivo da escolha. A mansão está cheia de pistas, enigmas, códigos e segredos deixados pelo bilionário, fazendo com que Avery precise participar de um verdadeiro jogo para descobrir a verdade."
+                >
+                    Ver resumo
+                </button>
+
+                <button class="favorito">
+                    ♡
+                </button>
+
+            </article>
+
+
+            <!-- 8 -->
+
+            <article
+                class="livro-card"
+                data-categoria="romance"
+                data-titulo="No Fundo é Amor"
+                data-autor="Ali Hazelwood"
+            >
+
+                <div class="capa">
+
+                    <img
+                        class="capa-img"
+                        data-busca="No Fundo é Amor Ali Hazelwood"
+                        alt="Capa de No Fundo é Amor"
+                    >
+
+                    <div class="capa-fallback">
+                        💙
+                    </div>
+
+                </div>
+
+                <span class="categoria-tag">
+                    Romance
+                </span>
+
+                <h3>No Fundo é Amor</h3>
+
+                <p class="autor">
+                    Ali Hazelwood
+                </p>
+
+                <button
+                    class="detalhes"
+                    data-titulo="No Fundo é Amor"
+                    data-autor="Ali Hazelwood"
+                    data-categoria="Romance"
+                    data-resumo="Scarlett Vandermeer é uma estudante universitária que divide seu tempo entre os estudos, os treinamentos esportivos e o objetivo de entrar na faculdade de Medicina. Depois de enfrentar uma lesão importante em sua carreira esportiva, ela tenta manter uma rotina discreta e focada. Lukas Blomqvist é um atleta de destaque e capitão da equipe de natação. Apesar de terem personalidades e objetivos diferentes, os dois acabam se aproximando. O relacionamento começa como um acordo temporário, mas sentimentos inesperados tornam a situação cada vez mais complicada. A história aborda escolhas, expectativas, confiança e a dificuldade de equilibrar vida pessoal, estudos e esporte."
+                >
+                    Ver resumo
+                </button>
+
+                <button class="favorito">
+                    ♡
+                </button>
+
+            </article>
+
+
+            <!-- 9 -->
+
+            <article
+                class="livro-card"
+                data-categoria="ficcao"
+                data-titulo="A Biblioteca da Meia-Noite"
+                data-autor="Matt Haig"
+            >
+
+                <div class="capa">
+
+                    <img
+                        class="capa-img"
+                        data-busca="A Biblioteca da Meia-Noite Matt Haig"
+                        alt="Capa de A Biblioteca da Meia-Noite"
+                    >
+
+                    <div class="capa-fallback">
+                        🌙
+                    </div>
+
+                </div>
+
+                <span class="categoria-tag">
+                    Ficção
+                </span>
+
+                <h3>A Biblioteca da Meia-Noite</h3>
+
+                <p class="autor">
+                    Matt Haig
+                </p>
+
+                <button
+                    class="detalhes"
+                    data-titulo="A Biblioteca da Meia-Noite"
+                    data-autor="Matt Haig"
+                    data-categoria="Ficção / Fantasia"
+                    data-resumo="Nora Seed é uma mulher que passa por uma fase de grande insatisfação e começa a refletir sobre as escolhas que fez ao longo da vida. Em determinado momento, ela encontra uma biblioteca extraordinária onde cada livro representa uma possibilidade diferente de vida. A partir daí, Nora começa a conhecer versões alternativas de sua própria história e percebe como pequenas decisões podem mudar completamente o caminho de uma pessoa. A obra apresenta uma reflexão sobre arrependimentos, escolhas, expectativas, felicidade e a importância de compreender que não existe uma única forma perfeita de viver."
+                >
+                    Ver resumo
+                </button>
+
+                <button class="favorito">
+                    ♡
+                </button>
+
+            </article>
+
+
+            <!-- 10 -->
+
+            <article
+                class="livro-card"
+                data-categoria="religiao"
+                data-titulo="Bíblia"
+                data-autor="Sociedade Bíblica do Brasil"
+            >
+
+                <div class="capa">
+
+                    <img
+                        class="capa-img"
+                        data-busca="Bíblia Sagrada NAA"
+                        alt="Capa da Bíblia"
+                    >
+
+                    <div class="capa-fallback">
+                        ✝️
+                    </div>
+
+                </div>
+
+                <span class="categoria-tag">
+                    Religioso
+                </span>
+
+                <h3>Bíblia</h3>
+
+                <p class="autor">
+                    Bíblia Sagrada
+                </p>
+
+                <button
+                    class="detalhes"
+                    data-titulo="Bíblia Sagrada"
+                    data-autor="Sociedade Bíblica do Brasil"
+                    data-categoria="Religioso"
+                    data-resumo="A Bíblia reúne textos que formam as Escrituras Sagradas do cristianismo. Ela é composta pelo Antigo e pelo Novo Testamento e apresenta diferentes gêneros literários, como narrativas históricas, poesia, sabedoria, profecias, cartas e relatos sobre a vida e os ensinamentos de Jesus. Ao longo de suas páginas aparecem histórias de personagens como Abraão, Moisés, Davi, Ester, Daniel, Pedro e Paulo, além dos Evangelhos, que apresentam a vida, morte e ressurreição de Jesus Cristo. Para os cristãos, a Bíblia é uma fonte fundamental de fé, ensinamentos e reflexão espiritual."
+                >
+                    Ver resumo
+                </button>
+
+                <button class="favorito">
+                    ♡
+                </button>
+
+            </article>
+
+        </div>
+
+
+        <p
+            id="semResultados"
+            class="sem-resultados"
+        >
+            📚 Nenhum livro encontrado.
+        </p>
+
+    </main>
+
+
+    <!-- ================= SOBRE ================= -->
+
+    <section id="sobre" class="sobre">
+
+        <div>
+
+            <span class="mini-titulo">
+                💜 Sobre a livraria
+            </span>
+
+            <h2>
+                Bem-vinda à Livraria Da Leh
+            </h2>
+
+            <p>
+                Um cantinho feito para quem acredita que cada livro
+                pode abrir uma porta para uma nova história.
+                Aqui você pode descobrir romances, aventuras,
+                mistérios, fantasias e livros que despertam
+                diferentes sentimentos e pensamentos.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MODAL ================= -->
+
+    <div
+        id="modal"
+        class="modal"
+    >
+
+        <div class="modal-conteudo">
+
+            <button
+                id="fecharModal"
+                class="fechar"
+            >
+                ×
+            </button>
+
+            <span
+                id="modalCategoria"
+                class="modal-tag"
+            ></span>
+
+            <h2 id="modalTitulo"></h2>
+
+            <h4 id="modalAutor"></h4>
+
+            <p id="modalDescricao"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            📚 Livraria Da Leh
+        </p>
+
+        <span>
+            Feita para quem ama histórias 💜
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
