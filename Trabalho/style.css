@@ -1,0 +1,1075 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f6ff;
+    color: #292447;
+    transition: 0.4s;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: rgba(255,255,255,0.95);
+
+    box-shadow: 0 3px 20px rgba(73, 50, 140, 0.10);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #5c39bd;
+}
+
+.logo span {
+    color: #347fd2;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #312b50;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #6944d4;
+}
+
+.tema-btn {
+    border: none;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #eee8ff;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.tema-btn:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 70px 10%;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(107, 76, 210, 0.20),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            120deg,
+            #eee7ff,
+            #e5f3ff
+        );
+}
+
+.hero-text {
+    max-width: 600px;
+
+    animation: aparecer 1s ease;
+}
+
+.destaque {
+    color: #6740c7;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7041ce,
+            #3287dc
+        );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-text > p:not(.destaque) {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #59536e;
+
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    border-radius: 12px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7041ce,
+            #3386dc
+        );
+
+    box-shadow:
+        0 10px 25px rgba(89, 55, 190, 0.25);
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 30px rgba(89, 55, 190, 0.35);
+}
+
+
+/* =========================
+   LIVRO ANIMADO
+========================= */
+
+.livro-animado {
+    width: 420px;
+    height: 360px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    perspective: 1200px;
+}
+
+.livro {
+    width: 310px;
+    height: 230px;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    animation:
+        flutuar 4s ease-in-out infinite;
+}
+
+.pagina {
+    width: 155px;
+    height: 230px;
+
+    position: absolute;
+
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #eee9ff
+        );
+
+    border: 2px solid #d4c8f2;
+
+    box-shadow:
+        inset 0 0 20px rgba(92, 61, 160, 0.08);
+}
+
+.pagina span {
+    font-size: 55px;
+
+    animation:
+        brilhoIcone 2s ease-in-out infinite;
+}
+
+.pagina-esquerda {
+    left: 0;
+
+    transform-origin: right center;
+
+    border-radius: 10px 0 0 10px;
+
+    animation:
+        abrirEsquerda 4s ease-in-out infinite;
+}
+
+.pagina-direita {
+    right: 0;
+
+    transform-origin: left center;
+
+    border-radius: 0 10px 10px 0;
+
+    animation:
+        abrirDireita 4s ease-in-out infinite;
+}
+
+.meio {
+    position: absolute;
+
+    width: 5px;
+    height: 230px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #c1b2e7;
+
+    z-index: 5;
+}
+
+
+/* ESTRELAS */
+
+.brilho {
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 15px #ffffff;
+
+    animation:
+        estrela 2.5s ease-in-out infinite;
+}
+
+.brilho1 {
+    top: 35px;
+    right: 30px;
+}
+
+.brilho2 {
+    bottom: 45px;
+    left: 30px;
+
+    animation-delay: 0.7s;
+}
+
+.brilho3 {
+    top: 80px;
+    left: 80px;
+
+    animation-delay: 1.2s;
+}
+
+
+/* ANIMAÇÕES */
+
+@keyframes abrirEsquerda {
+
+    0%,
+    100% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(-25deg);
+    }
+}
+
+@keyframes abrirDireita {
+
+    0%,
+    100% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(25deg);
+    }
+}
+
+@keyframes flutuar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes brilhoIcone {
+
+    0%,
+    100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+}
+
+@keyframes estrela {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1);
+    }
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================
+   LIVROS
+========================= */
+
+main {
+    padding: 90px 8%;
+}
+
+main h2 {
+    text-align: center;
+
+    font-size: 38px;
+
+    color: #342b58;
+}
+
+.subtitulo {
+    text-align: center;
+
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    color: #777;
+}
+
+
+/* =========================
+   PESQUISA
+========================= */
+
+.controles {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 45px;
+}
+
+.controles input,
+.controles select {
+    padding: 15px;
+
+    border: 2px solid #ded6f5;
+
+    border-radius: 12px;
+
+    background: white;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.controles input {
+    width: 380px;
+}
+
+.controles input:focus,
+.controles select:focus {
+    border-color: #7041ce;
+
+    box-shadow:
+        0 0 0 4px rgba(112,65,206,0.08);
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.livros-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.livro-card {
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 16px;
+
+    position: relative;
+
+    box-shadow:
+        0 8px 25px rgba(66, 44, 130, 0.09);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+
+    animation: cardEntrada 0.6s ease;
+}
+
+.livro-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(89, 57, 174, 0.18);
+}
+
+@keyframes cardEntrada {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   CAPAS
+========================= */
+
+.capa {
+    height: 280px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7350d1,
+            #4b91dc
+        );
+}
+
+.capa-img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    transition: 0.4s;
+}
+
+.livro-card:hover .capa-img {
+    transform: scale(1.04);
+}
+
+.capa-fallback {
+    font-size: 70px;
+
+    position: absolute;
+
+    z-index: 1;
+}
+
+
+/* =========================
+   INFORMAÇÕES DOS CARDS
+========================= */
+
+.categoria-tag,
+.modal-tag {
+    display: inline-block;
+
+    margin-top: 14px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: #eee8ff;
+
+    color: #6240bf;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.livro-card h3 {
+    font-size: 20px;
+
+    margin-top: 10px;
+
+    margin-bottom: 5px;
+}
+
+.autor {
+    color: #4a83cc;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+/* BOTÕES */
+
+.detalhes {
+    width: calc(100% - 50px);
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #eee8ff;
+
+    color: #5c3abc;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.detalhes:hover {
+    background: #ddd0ff;
+
+    transform: translateY(-2px);
+}
+
+.favorito {
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+
+    right: 16px;
+    bottom: 16px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #e8f3ff;
+
+    color: #347fd2;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.favorito:hover {
+    transform: scale(1.1);
+}
+
+.favorito.ativo {
+    background: #e7d9ff;
+
+    color: #6a3dcc;
+}
+
+
+/* =========================
+   SEM RESULTADOS
+========================= */
+
+.sem-resultados {
+    display: none;
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    color: #777;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    padding: 90px 15%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            120deg,
+            #e9e1ff,
+            #e3f2ff
+        );
+}
+
+.mini-titulo {
+    color: #6841c9;
+
+    font-weight: bold;
+}
+
+.sobre h2 {
+    margin-top: 15px;
+
+    font-size: 36px;
+}
+
+.sobre p {
+    max-width: 750px;
+
+    margin: 20px auto 0;
+
+    line-height: 1.8;
+
+    color: #5c586c;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(27, 20, 52, 0.75);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 200;
+}
+
+.modal.ativo {
+    display: flex;
+
+    animation: fundoModal 0.3s ease;
+}
+
+.modal-conteudo {
+    width: 100%;
+
+    max-width: 650px;
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 40px;
+
+    position: relative;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.25);
+
+    animation: abrirModal 0.35s ease;
+}
+
+@keyframes fundoModal {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes abrirModal {
+
+    from {
+        transform: scale(0.85) translateY(20px);
+
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) translateY(0);
+
+        opacity: 1;
+    }
+}
+
+.fechar {
+    position: absolute;
+
+    right: 20px;
+    top: 15px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 32px;
+
+    color: #777;
+
+    cursor: pointer;
+}
+
+.fechar:hover {
+    color: #5c39bd;
+}
+
+.modal-conteudo h2 {
+    margin-top: 15px;
+
+    color: #5334aa;
+
+    font-size: 30px;
+}
+
+.modal-conteudo h4 {
+    color: #397fc8;
+
+    margin-top: 8px;
+
+    margin-bottom: 20px;
+}
+
+.modal-conteudo p {
+    color: #555;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #292447;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+footer p {
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+footer span {
+    color: #c9c1e8;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MODO ESCURO
+========================= */
+
+body.escuro {
+    background: #161329;
+
+    color: white;
+}
+
+body.escuro header {
+    background: #211c3a;
+}
+
+body.escuro nav a {
+    color: white;
+}
+
+body.escuro .hero {
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(108, 73, 206, 0.25),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            120deg,
+            #211b3c,
+            #182a40
+        );
+}
+
+body.escuro .hero-text > p:not(.destaque) {
+    color: #c5c0d6;
+}
+
+body.escuro main h2 {
+    color: white;
+}
+
+body.escuro .livro-card {
+    background: #24203d;
+}
+
+body.escuro .controles input,
+body.escuro .controles select {
+    background: #24203d;
+
+    color: white;
+
+    border-color: #413962;
+}
+
+body.escuro .modal-conteudo {
+    background: #24203d;
+
+    color: white;
+}
+
+body.escuro .modal-conteudo p {
+    color: #d1ccdf;
+}
+
+body.escuro .sobre {
+    background:
+        linear-gradient(
+            120deg,
+            #252040,
+            #1b3047
+        );
+}
+
+body.escuro .sobre p {
+    color: #d0cbdc;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .livros-container {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+    .livro-animado {
+        transform: scale(0.85);
+    }
+
+    .livros-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .livro-animado {
+        transform: scale(0.7);
+
+        margin: -30px 0;
+    }
+
+    main {
+        padding: 60px 6%;
+    }
+
+    .controles {
+        flex-direction: column;
+    }
+
+    .controles input {
+        width: 100%;
+    }
+
+    .livros-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre {
+        padding: 70px 8%;
+    }
+
+    .modal-conteudo {
+        padding: 30px 22px;
+    }
+
+}
